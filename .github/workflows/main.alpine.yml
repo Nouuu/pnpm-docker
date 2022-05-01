@@ -16,19 +16,19 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Docker Image Update Checker
-        id: base-update-check
-        uses: lucacome/docker-image-update-checker@v1.1.0
-        with:
-          base-image: node:${{ matrix.version }}
-          image: nospy/pnpm:${{ matrix.version }}
+#      - name: Docker Image Update Checker
+#        id: base-update-check
+#        uses: lucacome/docker-image-update-checker@v1.1.0
+#        with:
+#          base-image: node:${{ matrix.version }}
+#          image: nospy/pnpm:${{ matrix.version }}
 
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-        if: steps.base-update-check.outputs.needs-updating == 'true'
+#        if: steps.base-update-check.outputs.needs-updating == 'true'
 
       - name: Build and push Docker images
         uses: docker/build-push-action@v2
@@ -38,4 +38,4 @@ jobs:
           push: true
           build-args: NODE_VERSION=${{ matrix.version }}
           tags: nospy/pnpm:${{ matrix.version }}
-        if: steps.base-update-check.outputs.needs-updating == 'true'
+#        if: steps.base-update-check.outputs.needs-updating == 'true'
