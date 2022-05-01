@@ -36,7 +36,6 @@ jobs:
           context: .
           file: Dockerfile.alpine
           push: true
-          build-arg:
-            NODE_VERSION: ${{ matrix.version }}
+          build-args: NODE_VERSION=${{ matrix.version }}
           tags: nospy/pnpm:${{ matrix.version }}
         if: steps.base-update-check.outputs.needs-updating == 'true'
