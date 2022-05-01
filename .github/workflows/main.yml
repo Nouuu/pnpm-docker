@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build:
@@ -21,7 +22,7 @@ jobs:
         uses: lucacome/docker-image-update-checker@v1.1.0
         with:
           base-image: node:${{ matrix.version }}
-          image: nospy/pnpm:${{ matrix.version }}
+          image: node:${{ matrix.version }}
 
       - name: Login to DockerHub
         uses: docker/login-action@v1
