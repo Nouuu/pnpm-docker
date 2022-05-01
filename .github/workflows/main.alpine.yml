@@ -1,4 +1,4 @@
-name: Regular base image update check
+name: Regular base image update check alpine
 on:
   schedule:
     - cron: "0 0 * * *"
