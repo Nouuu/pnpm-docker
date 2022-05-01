@@ -19,7 +19,7 @@ jobs:
 
       - name: Docker Image Update Checker
         id: baseupdatecheck
-        uses: lucacome/docker-image-update-checker@v1.1.0
+        uses: lucacome/docker-image-update-checker@v1
         with:
           base-image: node:${{ matrix.version }}
           image: nospy/pnpm:${{ matrix.version }}

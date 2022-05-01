@@ -19,10 +19,10 @@ jobs:
 
       - name: Docker Image Update Checker
         id: baseupdatecheck
-        uses: lucacome/docker-image-update-checker@v1.1.0
+        uses: lucacome/docker-image-update-checker@v1
         with:
           base-image: node:${{ matrix.version }}
-          image: node:${{ matrix.version }}
+          image: nospy/pnpm:${{ matrix.version }}
 
       - name: Login to DockerHub
         uses: docker/login-action@v1
