@@ -1,0 +1,7 @@
+ARG NODE_VERSION=lts-alpine
+FROM node:${NODE_VERSION}
+
+WORKDIR /app
+
+RUN apk add curl && \
+    curl -L https://unpkg.com/@pnpm/self-installer | node
