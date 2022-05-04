@@ -143,7 +143,7 @@ With dependencies :
 
 `pnpm install`
 
-First launch with empty store : 50s
-First launch with filled store : 18s
-Second launch with `pnpm-lockfile.yml` and filled store : 10s
-Other second launch with `pnpm-lockfile.yml` and empty store : 40s
+- First launch with empty store : 50s
+- First launch with filled store : 18s
+- Second launch with `pnpm-lockfile.yml` and filled store : 10s
+- Other second launch with `pnpm-lockfile.yml` and empty store : 40s
