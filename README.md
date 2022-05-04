@@ -54,7 +54,7 @@ The four relevant files are:
 
 [https://pnpm.io/npmrc#node-modules-settings](https://pnpm.io/npmrc#node-modules-settings)
 
-The global pnpm store module location is on `~/.local/share/pnpm/store`
+The global pnpm store module location is on `/root/.local/share/pnpm/store`
 
 ### Benchmark on real project
 
