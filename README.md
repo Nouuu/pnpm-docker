@@ -1,5 +1,7 @@
 # pnpm-docker
 
+[Docker Hub](https://hub.docker.com/repository/docker/nospy/pnpm)
+
 Fast, disk space efficient package manager:
 
 * **Fast.** Up to 2x faster than the alternatives (see [benchmark](#benchmark)).
